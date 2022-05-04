@@ -1,0 +1,6 @@
+{"1":{"User_id":1, "Connect_id":3, "Message_Type":"TEXT", "Content":"hello!", "Time": "21/21/21"},
+
+"2":{"User_id":1, "Connect_id":3, "Message_Type":"TEXT", "Content":"how are you!", "Time": "21/21/21"},
+
+"3":{"User_id":2, "Connect_id":3, "Message_Type":"TEXT", "Content":"hello!", "Time": "21/21/21"}
+}
