@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Chat module</title>
+<h1>Chat message</h1>
+<body>
+
+<form action="#" method="post">
+	<p>User_id: <input type="text" name="User_id" /></p>
+	<p>Connect_id: <input type="text" name="Connect_id" /></p>
+	<p>Message_Type: <input type="text" name="Message_Type" /></p>
+	<p>Content: <input type="text" name="Content" /></p>
+	<p><input type="submit" value="POST"/></p>
+
+<ul>
+<h2>Records Here</h2>
+<p>---------------------------------------------------</p>
+{% for key1, value1 in data.items() %}
+<h3>{{key1}} : </h3>
+	{% for key2, value2 in value1.items() %}
+		<h4>{{ key2 }}</h4>
+		{% for key3, value3 in value2.items() %}
+			<li>{{key3}} : {{value3}}</li>
+			{% endfor %}
+		{% endfor %}
+	<p>---------------------------------------------------</p>
+	{% endfor %}
+</ul>
+
+
+
+</body>
+</html>

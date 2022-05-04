@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>Device module</title>
+<h1>Measurements message</h1>
+<body>
+
+<form action="#" method="post">
+	<p>User_id: <input type="text" name="User_id" /></p>
+	<p>Weight: <input type="text" name="Weight" /></p>
+	<p>Height: <input type="text" name="Height" /></p>
+	<p>Temperature: <input type="text" name="Temperature" /></p>
+	<p>Systolic_Pressure: <input type="text" name="Systolic_Pressure" /></p>
+	<p>Diastolic_Pressure: <input type="text" name="Diastolic_Pressure" /></p>
+	<p>Pulse: <input type="text" name="Pulse" /></p>
+	<p>Oximeter: <input type="text" name="Oximeter" /></p>
+	<p>Glucometer: <input type="text" name="Glucometer" /></p>
+	<p><input type="submit" value="POST"/></p>
+
+<ul>
+<h2>Records Here</h2>
+<p>---------------------------------------------------</p>
+{% for key1, value1 in data.items() %}
+<h3>{{key1}} : </h3>
+	{% for key2, value2 in value1.items() %}
+			<li>{{key2}} : {{value2}}</li>
+		{% endfor %}
+	<p>---------------------------------------------------</p>
+	{% endfor %}
+</ul>
+
+
+</body>
+</html>

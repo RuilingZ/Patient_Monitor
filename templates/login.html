@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+    <h2 align="center">Please Login</h2>
+    <form action="" method=post>
+        <table align="center">
+            <tr>
+                <td>username:</td>
+                <td><input type="text" name="username" value="{{request.form['username']}}" placeholder="Username" > </td>
+            </tr>
+            <tr>
+                <td>passport：</td>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+        <table align="center">
+            <tr >
+                <td><input type="submit" value="Login" ></td>
+            </tr>
+ 
+        </table>
+    </form>
+</html>

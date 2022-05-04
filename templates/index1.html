@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Chat module</title>
+<body>
+    <div style="text-align: right;">
+        Welcome {{request.form['username']}}
+        <p><a href="{{ url_for('logout') }}">logout</a></p>
+    </div>
+<h1 style="text-align: center;">Patient Monitor Platform</h1>
+<h2>Welcome to Patient Monitor !</h2>
+
+<p><a href="{{ url_for('Storage') }}">create</a></p>
+<p><a href="{{ url_for('Users') }}">users</a></p>
+<p><a href="{{ url_for('Devices') }}">devices</a></p>
+<p><a href="{{ url_for('Measurements') }}">measurements</a></p>
+<p><a href="{{ url_for('Assignments') }}">assignments</a></p>
+<p><a href="{{ url_for('chat') }}">chat</a></p>
+
+
+
+
+<h4>This website is a Patient Monitor platform, which could realize the functions below.</h4>
+<ul>
+<li><span style="background-color: #ffff99;">Login</span>: a function has the attributes of users' 'Premission', 'User_id', 'Device_id', 'Roles'.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'login'</span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Create</span>: a function has the attributes of users' 'Premission', 'User_id', 'Device_id', 'Roles'.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'create'</span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Users</span>: a function has the attributes of&nbsp; users' 'User_id', 'Name', 'Date_of_Birth', 'Roles', 'Gender'.&nbsp;</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'users'</span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Devices</span>: a function has the attributes of users'&nbsp; 'Device_id', 'MAC', 'Date_of_Purchase', 'User_id', 'Fir_ver'.&nbsp;</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'devices'</span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Measurements</span>: a function has the attributes of users' 'User_id', 'Weight', 'Height', 'Temperature', 'Systolic_Pressure', 'Diastolic_Pressure', 'Pulse', 'Oximeter', 'Glucometer'.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'measurements'</span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Assignments</span>: a function has the attributes of users' 'Premission', 'User_id', 'Device_id', 'Roles'.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Click the botton:&nbsp; <span style="background-color: #ccffff;">'assignments'</span></p>
+<p><span style="text-decoration: underline;"><em>All of the functions above are able to 1) get the data of the values of its attributes;&nbsp; 2) create new value of its attributes&nbsp;</em></span></p>
+<ul>
+<li><span style="background-color: #ffff99;">Records</span>: a function has the attributes of the chat infomation of users. Attributes: 'User_id', 'Connect_id', 'Message_Type', 'Content', 'Time'. And the number of record and the times of the record with the same user will be saved automatically.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Route of the function:&nbsp; <span style="background-color: #ccffff;">'chat'</span></p>
+<p><span style="text-decoration: underline;"><em>The functions above is able to 1) get the data of the values of its attributes;&nbsp; 2) create the new values of the chat's attributes in the function.&nbsp;</em></span></p>
+</body>
+</html>

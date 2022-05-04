@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Device module</title>
+<h1>Assigments message</h1>
+<body>
+
+<form action="#" method="post">
+	<p>Device_id: <input type="text" name="Device_id" /></p>
+	<p>User_id: <input type="text" name="User_id" /></p>
+	<p>Assigner_id: <input type="text" name="Assigner_id" /></p>
+	<p>Date_Assigned: <input type="text" name="Date_Assigned" /></p>
+	<p><input type="submit" value="POST"/></p>
+
+<ul>
+<h2>Records Here</h2>
+<p>---------------------------------------------------</p>
+{% for key1, value1 in data.items() %}
+<h3>{{key1}} : </h3>
+	{% for key2, value2 in value1.items() %}
+			<li>{{key2}} : {{value2}}</li>
+		{% endfor %}
+	<p>---------------------------------------------------</p>
+	{% endfor %}
+</ul>
+
+
+</body>
+</html>
